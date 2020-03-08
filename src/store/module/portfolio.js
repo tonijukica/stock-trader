@@ -36,7 +36,7 @@ const mutations = {
     'SELL_STOCK': (state, {stockId, quantaty, price}) => {
         const stock = state.boughtStocks.find(el => el.id == stockId);
         if(stock.quantaty > quantaty)
-            state.quantaty -= quantaty;
+            stock.quantaty -= quantaty;
         else
            state.boughtStocks = state.boughtStocks.filter(el => el.id !== stockId);
         state.funds += quantaty * price;

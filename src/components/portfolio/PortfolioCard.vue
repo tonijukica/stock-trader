@@ -11,7 +11,6 @@
                     single-line
                     outlined/>
                 </v-col>
-                <v-spacer/>
                 <v-col md=3 align="center">
                     <v-btn x-large color="error"
                     :disabled="sellQuantaty > stock.quantaty"
@@ -28,7 +27,7 @@ import { mapActions } from 'vuex'
 export default {
     props: ['stock'],
     data: () => ({
-        sellQuantaty: 0
+        sellQuantaty: ''
     }),
     methods: {
         ...mapActions(['sell']),
